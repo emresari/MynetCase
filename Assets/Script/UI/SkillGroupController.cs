@@ -32,9 +32,7 @@ namespace Script.UI
         private void SetSkillViews()
         {
             foreach (var skillView in skillViews)
-            {
                 skillView.Button.interactable = skillView.IsUsed;
-            }
         }
 
         private void OnDisable()

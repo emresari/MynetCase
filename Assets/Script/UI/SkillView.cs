@@ -30,10 +30,10 @@ namespace Script.UI
         {
             if (scriptableSkill == null || IsUsed) return;
             IsUsed = true;
+            
             foreach (var entity in GameManager.Instance.entities)
-            {
                 scriptableSkill.TryUse(entity);
-            }
+            
             border.gameObject.SetActive(true);
             SkillUsed?.Invoke();
         }
